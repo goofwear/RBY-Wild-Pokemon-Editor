@@ -1,0 +1,1123 @@
+object PokeEdit: TPokeEdit
+  Left = 1063
+  Height = 373
+  Top = 233
+  Width = 417
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'RBY Wild Pokémon Editor'
+  ClientHeight = 353
+  ClientWidth = 417
+  Menu = MainMenu1
+  Position = poDesktopCenter
+  LCLVersion = '0.9.29'
+  object WildPkmnBox: TGroupBox
+    Left = 8
+    Height = 337
+    Top = 8
+    Width = 401
+    Caption = 'Wild Pokémon'
+    ClientHeight = 319
+    ClientWidth = 397
+    Color = clBtnFace
+    ParentColor = False
+    TabOrder = 0
+    object NoPkmnLabel1: TLabel
+      Left = 214
+      Height = 16
+      Top = 32
+      Width = 162
+      Caption = 'No Wild Pokémon Data Found'
+      ParentColor = False
+      Visible = False
+    end
+    object GLabel: TLabel
+      Left = 214
+      Height = 16
+      Top = 8
+      Width = 35
+      Caption = 'Game:'
+      ParentColor = False
+    end
+    object Gload: TLabel
+      Left = 254
+      Height = 16
+      Top = 8
+      Width = 30
+      Caption = 'None'
+      ParentColor = False
+    end
+    object MapGroup1: TGroupBox
+      Left = 16
+      Height = 49
+      Top = 0
+      Width = 185
+      Caption = 'Map'
+      ClientHeight = 31
+      ClientWidth = 181
+      TabOrder = 0
+      object MapCombo1: TComboBox
+        Left = 8
+        Height = 23
+        Top = 1
+        Width = 164
+        Enabled = False
+        ItemHeight = 15
+        Items.Strings = (
+          'Pallet Town'
+          'Viridian City'
+          'Pewter City'
+          'Cerulean City'
+          'Lavender Town'
+          'Vermilion City'
+          'Celadon City'
+          'Fuchsia City'
+          'Cinnibar Island'
+          'Indigo Plateau'
+          'Saffron City'
+          '** Bad Map **'
+          'Route 1'
+          'Route 2'
+          'Route 3'
+          'Route 4'
+          'Route 5'
+          'Route 6'
+          'Route 7'
+          'Route 8'
+          'Route 9'
+          'Route 10'
+          'Route 11'
+          'Route 12'
+          'Route 13'
+          'Route 14'
+          'Route 15'
+          'Route 16'
+          'Route 17'
+          'Route 18'
+          'Route 19'
+          'Route 20'
+          'Route 21'
+          'Route 22'
+          'Route 23'
+          'Route 24'
+          'Route 25'
+          'Ash''s House F1'
+          'Ash''s House F2'
+          'Gary''s House'
+          'Oak''s Lab'
+          'Viridian Pokémon Center'
+          'Viridian Mart'
+          'Viridian School'
+          'Viridian House'
+          'Viridian Gym'
+          'Digletts Cave (Route 2)'
+          'Viridian Forest (Exit)'
+          'Route 2 House'
+          'Route 2 Gate'
+          'Viridian Forest (Entrance)'
+          'Viridian Forest'
+          'Pewter City Museum F1'
+          'Pewter City Museum F2'
+          'Pewter City Gym'
+          'Pewter City House'
+          'Pewter City Mart'
+          'Pewter City House'
+          'Pewter City Pokémon Center'
+          'Mt. Moon Cave (1)'
+          'Mt. Moon Cave (2)'
+          'Mt. Moon Cave (3)'
+          'Cerulean House (Robbed)'
+          'Cerulean House (2)'
+          'Cerulean Pokémon Center'
+          'Cerulean Gym'
+          'Cerulean Bike Shop'
+          'Cerulean Mart'
+          'Mt. Moon Pokémon Center'
+          'Cerulean House (Robbed) (Copy)'
+          'Route 5 Gate'
+          'Underground Tunnel Entrance (Route 5)'
+          'Day Care Center'
+          'Route 6 Gate'
+          'Underground Tunnel Entrance (Route 6)'
+          'Underground Tunnel Entrance (Route 6) (Copy)'
+          'Route 7 Gate'
+          'Underground Path Entrance (Route 7)'
+          'Underground Path Entrance (Route 7) (Copy)'
+          'Route 8 Gate'
+          'Underground Path Entrance (Route 8)'
+          'Rock Tunnel Pokémon Center'
+          'Rock Tunnel (1)'
+          'Power Plant'
+          'Route 11 Gate'
+          'Diglett''s Cave Entrance (Route 11)'
+          'Route 11 Gate (Upstairs)'
+          'Route 12 Gate'
+          'Bill''s House'
+          'Vermilion Pokémon Center'
+          'Vermilion Pokémon Fan Club'
+          'Vermilion Mart'
+          'Vermilion Gym'
+          'Vermilion House'
+          'Vermilion Dock'
+          'S.S. Anne (1)'
+          'S.S. Anne (2)'
+          'S.S. Anne (3)'
+          'S.S. Anne (4)'
+          'S.S. Anne (5)'
+          'S.S. Anne (6)'
+          'S.S. Anne (7)'
+          'S.S. Anne (8)'
+          'S.S. Anne (9)'
+          'S.S. Anne (10)'
+          '** Bad Map **'
+          '** Bad Map **'
+          '** Bad Map **'
+          'Victory Road (1)'
+          '** Bad Map **'
+          '** Bad Map **'
+          '** Bad Map **'
+          '** Bad Map **'
+          'Elite Four Lance'
+          '** Bad Map **'
+          '** Bad Map **'
+          '** Bad Map **'
+          '** Bad Map **'
+          'Hall of Fame Room'
+          'Underground Path (N/S)'
+          'Elite Four Gary'
+          'Underground Path (W/E)'
+          'Celadon Mart (1)'
+          'Celadon Mart (2)'
+          'Celadon Mart (3)'
+          'Celadon Mart (4)'
+          'Celadon Mart (6)'
+          'Celadon Mart Elevator'
+          'Celadon Mansion (1)'
+          'Celadon Mansion (2)'
+          'Celadon Mansion (3)'
+          'Celadon Mansion (4)'
+          'Celadon Mansion (5)'
+          'Celadon Pokecenter'
+          'Celadon Gym'
+          'Celadon Game Corner'
+          'Celadon Mart (5)'
+          'Celadon Prize Room'
+          'Celadon Diner'
+          'Celadon House (2)'
+          'Celadon Hotel'
+          'Lavender Pokecenter'
+          'Pokemon Tower (1)'
+          'Pokemon Tower (2)'
+          'Pokemon Tower (3)'
+          'Pokemon Tower (4)'
+          'Pokemon Tower (5)'
+          'Pokemon Tower (6)'
+          'Pokemon Tower (7)'
+          'Lavender House (1)'
+          'Lavender Mart'
+          'Lavender House (2)'
+          'Fuchsia Mart'
+          'Fuchsia House (1)'
+          'Fuchsia Pokecenter'
+          'Fuchsia House (2)'
+          'Safari Zone Entrance'
+          'Fuchsia Gym'
+          'Fuchsia Meeting Room'
+          'Seafoam Islands (2)'
+          'Seafoam Islands (3)'
+          'Seafoam Islands (4)'
+          'Seafoam Islands (5)'
+          'Vermilion House (2)'
+          'Fuchsia House (3)'
+          'Mansion (1)'
+          'Cinnibar Gym'
+          'Lab (1)'
+          'Lab (2)'
+          'Lab (3)'
+          'Lab (4)'
+          'Cinnibar Pokecenter'
+          'Cinnibar Mart'
+          'Cinnibar Mart (Copy)'
+          'Indigo Plateau Lobby'
+          'Copycat''s House F1 '
+          'Copycat''s House F2'
+          'Fighting Dojo'
+          'Saffron Gym'
+          'Saffron House (1)'
+          'Saffron Mart'
+          'Silph Co (1)'
+          'Saffron Pokecenter'
+          'Saffron House (2)'
+          'Route 15 Gate'
+          'Route 15 Gate Upstairs'
+          'Route 16 Gate Map'
+          'Route 16 Gate Upstairs'
+          'Route 16 House'
+          'Route 12 House'
+          'Route 18 Gate'
+          'Route 18 Gate Upstairs'
+          'Seafoam Islands (1)'
+          'Route 22 Gate'
+          'Victory Road'
+          'Route 12 Gate Upstairs'
+          'Vermilion House (3)'
+          'Diglett''s Cave'
+          'Victory Road (3)'
+          'Rocket Hideout (1)'
+          'Rocket Hideout (2)'
+          'Rocket Hideout (3)'
+          'Rocket Hideout (4)'
+          'Rocket Hideout (Elevator)'
+          '** Bad Map **'
+          '** Bad Map **'
+          '** Bad Map **'
+          'Silph Co (2)'
+          'Silph Co (3)'
+          'Silph Co (4)'
+          'Silph Co (5)'
+          'Silph Co (6)'
+          'Silph Co (7)'
+          'Silph Co (8)'
+          'Mansion (2)'
+          'Mansion (3)'
+          'Mansion (4)'
+          'Safari Zone East'
+          'Safari Zone North'
+          'Safari Zone West'
+          'Safari Zone Center'
+          'Safari Zone Rest House (1)'
+          'Safari Zone Secret House'
+          'Safari Zone Rest House (2)'
+          'Safari Zone Rest House (3)'
+          'Safari Zone Rest House (4)'
+          'Unknown Dungeon(2)'
+          'Unknown Dungeon(3)'
+          'Unknown Dungeon(1)'
+          'Name Rater''s House'
+          'Cerulean House (3)'
+          '** Bad Map **'
+          'Rock Tunnel (2)'
+          'Silph Co (9)'
+          'Silph Co (10)'
+          'Silph Co (11)'
+          'Silph Co (Elevator)'
+          '** Bad Map **'
+          '** Bad Map **'
+          'Battle Center'
+          'Trade Center'
+          '** Bad Map **'
+          '** Bad Map **'
+          '** Bad Map **'
+          '** Bad Map **'
+          'Elite Four Loreli'
+          'Elite Four Bruno'
+          'Elite Four Agatha'
+          'Surf House (Yellow)'
+          '** Bad Map **'
+          '** Bad Map **'
+          '** Bad Map **'
+          '** Bad Map **'
+          '** Bad Map **'
+          '** Bad Map **'
+        )
+        OnChange = MapCombo1Change
+        Style = csDropDownList
+        TabOrder = 0
+      end
+    end
+    object PkmnControl1: TPageControl
+      Left = 16
+      Height = 248
+      Top = 56
+      Width = 368
+      ActivePage = LandSheet1
+      TabIndex = 0
+      TabOrder = 1
+      Visible = False
+      object LandSheet1: TTabSheet
+        Caption = 'Land'
+        ClientHeight = 220
+        ClientWidth = 360
+        object LandPkmnBox1: TListBox
+          Left = 8
+          Height = 137
+          Top = 8
+          Width = 105
+          Enabled = False
+          ItemHeight = 0
+          OnClick = LandPkmnBox1Click
+          ParentFont = False
+          TabOrder = 0
+        end
+        object LandLvlBox1: TListBox
+          Left = 120
+          Height = 137
+          Top = 8
+          Width = 40
+          Enabled = False
+          ItemHeight = 0
+          OnClick = LandLvlBox1Click
+          ParentFont = False
+          TabOrder = 1
+        end
+        object LER25: TLabel
+          Left = 164
+          Height = 14
+          Top = 8
+          Width = 22
+          Caption = '25%'
+          Font.Height = -11
+          ParentColor = False
+          ParentFont = False
+        end
+        object LER_15_1: TLabel
+          Left = 164
+          Height = 14
+          Top = 21
+          Width = 22
+          Caption = '15%'
+          Font.Height = -11
+          ParentColor = False
+          ParentFont = False
+        end
+        object LER_15_2: TLabel
+          Left = 164
+          Height = 14
+          Top = 35
+          Width = 22
+          Caption = '15%'
+          Font.Height = -11
+          ParentColor = False
+          ParentFont = False
+        end
+        object LER_10_1: TLabel
+          Left = 164
+          Height = 14
+          Top = 49
+          Width = 22
+          Caption = '10%'
+          Font.Height = -11
+          ParentColor = False
+          ParentFont = False
+        end
+        object LER_10_2: TLabel
+          Left = 164
+          Height = 14
+          Top = 62
+          Width = 22
+          Caption = '10%'
+          Font.Height = -11
+          ParentColor = False
+          ParentFont = False
+        end
+        object LER_10_3: TLabel
+          Left = 164
+          Height = 14
+          Top = 75
+          Width = 22
+          Caption = '10%'
+          Font.Height = -11
+          ParentColor = False
+          ParentFont = False
+        end
+        object LER_5_1: TLabel
+          Left = 164
+          Height = 14
+          Top = 88
+          Width = 16
+          Caption = '5%'
+          Font.Height = -11
+          ParentColor = False
+          ParentFont = False
+        end
+        object LER_5_2: TLabel
+          Left = 164
+          Height = 14
+          Top = 100
+          Width = 16
+          Caption = '5%'
+          Font.Height = -11
+          ParentColor = False
+          ParentFont = False
+        end
+        object LER_4_1: TLabel
+          Left = 164
+          Height = 14
+          Top = 113
+          Width = 16
+          Caption = '4%'
+          Font.Height = -11
+          ParentColor = False
+          ParentFont = False
+        end
+        object LER_1: TLabel
+          Left = 164
+          Height = 14
+          Top = 126
+          Width = 16
+          Caption = '1%'
+          Font.Height = -11
+          ParentColor = False
+          ParentFont = False
+        end
+        object LandOffset1: TLabel
+          Left = 202
+          Height = 16
+          Top = 129
+          Width = 36
+          Caption = 'Offset:'
+          ParentColor = False
+        end
+        object LandOffset2: TLabel
+          Left = 242
+          Height = 16
+          Top = 129
+          Width = 19
+          Caption = '$00'
+          ParentColor = False
+        end
+        object LandPkmnGroup1: TGroupBox
+          Left = 202
+          Height = 49
+          Top = 8
+          Width = 148
+          Caption = 'Pokémon'
+          ClientHeight = 31
+          ClientWidth = 144
+          TabOrder = 2
+          object LandPkmnCombo1: TComboBox
+            Left = 4
+            Height = 23
+            Top = 1
+            Width = 136
+            Enabled = False
+            ItemHeight = 15
+            Items.Strings = (
+              'Missingno'
+              'Bulbasaur'
+              'Ivysaur'
+              'Venusaur'
+              'Charmander'
+              'Charmeleon'
+              'Charizard'
+              'Squirtle'
+              'Wartortle'
+              'Blasttoise'
+              'Caterpie'
+              'Metapod'
+              'Butterfree'
+              'Weedle'
+              'Kakuna'
+              'Beedrill'
+              'Pidgey'
+              'Pidgeotto'
+              'Pidgeot'
+              'Rattata'
+              'Raticate'
+              'Spearow'
+              'Fearow'
+              'Ekans'
+              'Arbok'
+              'Pikachu'
+              'Raichu'
+              'Sandshrew'
+              'Sandslash'
+              'Nidoran(F)'
+              'Nidorina'
+              'Nidoqueen'
+              'Nidoran(M)'
+              'Nidorino'
+              'Nidoking'
+              'Clefairy'
+              'Clefable'
+              'Vulpix'
+              'Ninetails'
+              'Jigglypuff'
+              'Wigglytuff'
+              'Zubat'
+              'Golbat'
+              'Oddish'
+              'Gloom'
+              'Vileplume'
+              'Paras'
+              'Parasect'
+              'Venonat'
+              'Venomoth'
+              'Diglett'
+              'Dugtrio'
+              'Meowth'
+              'Persian'
+              'Psyduck'
+              'Golduck'
+              'Mankey'
+              'Primeape'
+              'Growlithe'
+              'Arcanine'
+              'Poliwag'
+              'Poliwhirl'
+              'Poliwrath'
+              'Abra'
+              'Kadabra'
+              'Alakazam'
+              'Machop'
+              'Machoke'
+              'Machamp'
+              'Bellsprout'
+              'Weepinbell'
+              'Victreebell'
+              'Tentacool'
+              'Tentacruel'
+              'Geodude'
+              'Graveler'
+              'Golem'
+              'Ponyta'
+              'Rapidash'
+              'Slowpoke'
+              'Slowbro'
+              'Magnemite'
+              'Magneton'
+              'Farfetch''d'
+              'Doduo'
+              'Dodrio'
+              'Seel'
+              'Dewgong'
+              'Grimer'
+              'Muk'
+              'Shellder'
+              'Cloyster'
+              'Gastly'
+              'Haunter'
+              'Gengar'
+              'Onix'
+              'Drowzee'
+              'Hypno'
+              'Krabby'
+              'Kingler'
+              'Voltorb'
+              'Electrode'
+              'Exeggcute'
+              'Exeggcutor'
+              'Cubone'
+              'Marowak'
+              'Hitmonlee'
+              'Hitmonchan'
+              'Lickitung'
+              'Koffing'
+              'Weezing'
+              'Rhyhorn'
+              'Rhydon'
+              'Chansey'
+              'Tangela'
+              'Kangaskhan'
+              'Horsea'
+              'Seadra'
+              'Goldeen'
+              'Seaking'
+              'Staryu'
+              'Starmie'
+              'Mr. Mime'
+              'Scyther'
+              'Jynx'
+              'Electabuzz'
+              'Magmar'
+              'Pinsir'
+              'Tauros'
+              'Magikarp'
+              'Gyarados'
+              'Lapras'
+              'Ditto'
+              'Eevee'
+              'Vaporeon'
+              'Jolteon'
+              'Flareon'
+              'Porygon'
+              'Omanyte'
+              'Omastar'
+              'Kabuto'
+              'Kabutops'
+              'Aerodactyl'
+              'Snorlax'
+              'Articuno'
+              'Zapdos'
+              'Moltres'
+              'Dratini'
+              'Dragonair'
+              'Dragonite'
+              'Mewtwo'
+              'Mew'
+            )
+            TabOrder = 0
+          end
+        end
+        object LandLvlGroup1: TGroupBox
+          Left = 202
+          Height = 49
+          Top = 64
+          Width = 57
+          Caption = 'Level'
+          ClientHeight = 31
+          ClientWidth = 53
+          TabOrder = 3
+          object LandLvlEdit1: TSpinEdit
+            Left = 4
+            Height = 23
+            Top = 1
+            Width = 46
+            Enabled = False
+            TabOrder = 0
+          end
+        end
+        object LandRateGroup1: TGroupBox
+          Left = 8
+          Height = 65
+          Top = 152
+          Width = 169
+          Caption = 'Encounter Rate'
+          ClientHeight = 47
+          ClientWidth = 165
+          TabOrder = 4
+          object LandPercent1: TLabel
+            Left = 55
+            Height = 16
+            Top = 28
+            Width = 60
+            Alignment = taCenter
+            AutoSize = False
+            Caption = '%'
+            ParentColor = False
+          end
+          object LandRateTrack1: TTrackBar
+            Left = 8
+            Height = 29
+            Top = 0
+            Width = 152
+            Frequency = 10
+            Max = 100
+            Min = 1
+            OnChange = LandRateTrack1Change
+            Position = 1
+            Enabled = False
+            TabOrder = 0
+          end
+        end
+        object LandReplaceBtn1: TButton
+          Left = 275
+          Height = 25
+          Top = 80
+          Width = 75
+          Caption = 'Replace'
+          Enabled = False
+          OnClick = LandReplaceBtn1Click
+          TabOrder = 5
+        end
+      end
+      object WaterSheet1: TTabSheet
+        Caption = 'Water'
+        ClientHeight = 220
+        ClientWidth = 360
+        object WaterPkmnBox1: TListBox
+          Left = 8
+          Height = 137
+          Top = 8
+          Width = 105
+          Enabled = False
+          ItemHeight = 0
+          OnClick = WaterPkmnBox1Click
+          ParentFont = False
+          TabOrder = 0
+        end
+        object WaterRateGroup1: TGroupBox
+          Left = 8
+          Height = 65
+          Top = 152
+          Width = 169
+          Caption = 'Encounter Rate'
+          ClientHeight = 47
+          ClientWidth = 165
+          TabOrder = 1
+          object WaterPercent1: TLabel
+            Left = 55
+            Height = 16
+            Top = 28
+            Width = 60
+            Alignment = taCenter
+            AutoSize = False
+            Caption = '%'
+            ParentColor = False
+          end
+          object WaterRateTrack1: TTrackBar
+            Left = 8
+            Height = 29
+            Top = 0
+            Width = 152
+            Frequency = 10
+            Max = 100
+            Min = 1
+            OnChange = WaterRateTrack1Change
+            Position = 1
+            Enabled = False
+            TabOrder = 0
+          end
+        end
+        object WaterReplaceBtn1: TButton
+          Left = 275
+          Height = 25
+          Top = 80
+          Width = 75
+          Caption = 'Replace'
+          Enabled = False
+          OnClick = WaterReplaceBtn1Click
+          TabOrder = 2
+        end
+        object WaterLvlGroup1: TGroupBox
+          Left = 202
+          Height = 49
+          Top = 64
+          Width = 57
+          Caption = 'Level'
+          ClientHeight = 31
+          ClientWidth = 53
+          TabOrder = 3
+          object WaterLvlEdit1: TSpinEdit
+            Left = 4
+            Height = 23
+            Top = 1
+            Width = 46
+            Enabled = False
+            TabOrder = 0
+          end
+        end
+        object WaterPkmnGroup1: TGroupBox
+          Left = 202
+          Height = 49
+          Top = 8
+          Width = 148
+          Caption = 'Pokémon'
+          ClientHeight = 31
+          ClientWidth = 144
+          TabOrder = 4
+          object WaterPkmnCombo1: TComboBox
+            Left = 4
+            Height = 23
+            Top = 1
+            Width = 136
+            Enabled = False
+            ItemHeight = 15
+            Items.Strings = (
+              'Missingno'
+              'Bulbasaur'
+              'Ivysaur'
+              'Venusaur'
+              'Charmander'
+              'Charmeleon'
+              'Charizard'
+              'Squirtle'
+              'Wartortle'
+              'Blasttoise'
+              'Caterpie'
+              'Metapod'
+              'Butterfree'
+              'Weedle'
+              'Kakuna'
+              'Beedrill'
+              'Pidgey'
+              'Pidgeotto'
+              'Pidgeot'
+              'Rattata'
+              'Raticate'
+              'Spearow'
+              'Fearow'
+              'Ekans'
+              'Arbok'
+              'Pikachu'
+              'Raichu'
+              'Sandshrew'
+              'Sandslash'
+              'Nidoran(F)'
+              'Nidorina'
+              'Nidoqueen'
+              'Nidoran(M)'
+              'Nidorino'
+              'Nidoking'
+              'Clefairy'
+              'Clefable'
+              'Vulpix'
+              'Ninetails'
+              'Jigglypuff'
+              'Wigglytuff'
+              'Zubat'
+              'Golbat'
+              'Oddish'
+              'Gloom'
+              'Vileplume'
+              'Paras'
+              'Parasect'
+              'Venonat'
+              'Venomoth'
+              'Diglett'
+              'Dugtrio'
+              'Meowth'
+              'Persian'
+              'Psyduck'
+              'Golduck'
+              'Mankey'
+              'Primeape'
+              'Growlithe'
+              'Arcanine'
+              'Poliwag'
+              'Poliwhirl'
+              'Poliwrath'
+              'Abra'
+              'Kadabra'
+              'Alakazam'
+              'Machop'
+              'Machoke'
+              'Machamp'
+              'Bellsprout'
+              'Weepinbell'
+              'Victreebell'
+              'Tentacool'
+              'Tentacruel'
+              'Geodude'
+              'Graveler'
+              'Golem'
+              'Ponyta'
+              'Rapidash'
+              'Slowpoke'
+              'Slowbro'
+              'Magnemite'
+              'Magneton'
+              'Farfetch''d'
+              'Doduo'
+              'Dodrio'
+              'Seel'
+              'Dewgong'
+              'Grimer'
+              'Muk'
+              'Shellder'
+              'Cloyster'
+              'Gastly'
+              'Haunter'
+              'Gengar'
+              'Onix'
+              'Drowzee'
+              'Hypno'
+              'Krabby'
+              'Kingler'
+              'Voltorb'
+              'Electrode'
+              'Exeggcute'
+              'Exeggcutor'
+              'Cubone'
+              'Marowak'
+              'Hitmonlee'
+              'Hitmonchan'
+              'Lickitung'
+              'Koffing'
+              'Weezing'
+              'Rhyhorn'
+              'Rhydon'
+              'Chansey'
+              'Tangela'
+              'Kangaskhan'
+              'Horsea'
+              'Seadra'
+              'Goldeen'
+              'Seaking'
+              'Staryu'
+              'Starmie'
+              'Mr. Mime'
+              'Scyther'
+              'Jynx'
+              'Electabuzz'
+              'Magmar'
+              'Pinsir'
+              'Tauros'
+              'Magikarp'
+              'Gyarados'
+              'Lapras'
+              'Ditto'
+              'Eevee'
+              'Vaporeon'
+              'Jolteon'
+              'Flareon'
+              'Porygon'
+              'Omanyte'
+              'Omastar'
+              'Kabuto'
+              'Kabutops'
+              'Aerodactyl'
+              'Snorlax'
+              'Articuno'
+              'Zapdos'
+              'Moltres'
+              'Dratini'
+              'Dragonair'
+              'Dragonite'
+              'Mewtwo'
+              'Mew'
+            )
+            TabOrder = 0
+          end
+        end
+        object WaterLvlBox1: TListBox
+          Left = 120
+          Height = 137
+          Top = 8
+          Width = 40
+          Enabled = False
+          ItemHeight = 0
+          OnClick = WaterLvlBox1Click
+          ParentFont = False
+          TabOrder = 5
+        end
+        object WaterOffset2: TLabel
+          Left = 242
+          Height = 16
+          Top = 129
+          Width = 19
+          Caption = '$00'
+          ParentColor = False
+        end
+        object WaterOffset1: TLabel
+          Left = 202
+          Height = 16
+          Top = 129
+          Width = 36
+          Caption = 'Offset:'
+          ParentColor = False
+        end
+        object WER1: TLabel
+          Left = 164
+          Height = 14
+          Top = 126
+          Width = 16
+          Caption = '1%'
+          Font.Height = -11
+          ParentColor = False
+          ParentFont = False
+        end
+        object WER4: TLabel
+          Left = 164
+          Height = 14
+          Top = 113
+          Width = 16
+          Caption = '4%'
+          Font.Height = -11
+          ParentColor = False
+          ParentFont = False
+        end
+        object WER5_2: TLabel
+          Left = 164
+          Height = 14
+          Top = 100
+          Width = 16
+          Caption = '5%'
+          Font.Height = -11
+          ParentColor = False
+          ParentFont = False
+        end
+        object WER5_1: TLabel
+          Left = 164
+          Height = 14
+          Top = 88
+          Width = 16
+          Caption = '5%'
+          Font.Height = -11
+          ParentColor = False
+          ParentFont = False
+        end
+        object WER10_3: TLabel
+          Left = 164
+          Height = 14
+          Top = 75
+          Width = 22
+          Caption = '10%'
+          Font.Height = -11
+          ParentColor = False
+          ParentFont = False
+        end
+        object WER10_2: TLabel
+          Left = 164
+          Height = 14
+          Top = 62
+          Width = 22
+          Caption = '10%'
+          Font.Height = -11
+          ParentColor = False
+          ParentFont = False
+        end
+        object WER10_1: TLabel
+          Left = 164
+          Height = 14
+          Top = 49
+          Width = 22
+          Caption = '10%'
+          Font.Height = -11
+          ParentColor = False
+          ParentFont = False
+        end
+        object WER15_2: TLabel
+          Left = 164
+          Height = 14
+          Top = 35
+          Width = 22
+          Caption = '15%'
+          Font.Height = -11
+          ParentColor = False
+          ParentFont = False
+        end
+        object WER15_1: TLabel
+          Left = 164
+          Height = 14
+          Top = 21
+          Width = 22
+          Caption = '15%'
+          Font.Height = -11
+          ParentColor = False
+          ParentFont = False
+        end
+        object WER25: TLabel
+          Left = 164
+          Height = 14
+          Top = 8
+          Width = 22
+          Caption = '25%'
+          Font.Height = -11
+          ParentColor = False
+          ParentFont = False
+        end
+      end
+    end
+  end
+  object MainMenu1: TMainMenu
+    left = 352
+    top = 288
+    object File1: TMenuItem
+      Caption = 'File'
+      object Open1: TMenuItem
+        Caption = 'Open...'
+        ShortCut = 16463
+        OnClick = Open1Click
+      end
+      object Save1: TMenuItem
+        Caption = 'Save'
+        Enabled = False
+        ShortCut = 16467
+        OnClick = Save1Click
+      end
+      object N1: TMenuItem
+      end
+      object Exit1: TMenuItem
+        Caption = 'Exit'
+        ShortCut = 16472
+        OnClick = Exit1Click
+      end
+    end
+  end
+  object OpenRomDialog1: TOpenDialog
+    Filter = 'Gameboy Roms (*.gb,*.gbc)|*.gb;*.gbc'
+    left = 320
+    top = 288
+  end
+end
